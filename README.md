@@ -19,3 +19,8 @@ a `const operator` que recebe um ternário com a condição de se o valor for < 
 <p>
 Função que vai executar o preenchimento das informações do estado da aplicação quando a página for carregada
 </p>
+
+## Armazenando diversos valores 
+
+-  Armazenar os valores em um array. Caso clássico para o uso do `map`
+-  Podemos inteirar por esse array, gerar um novo com a mesma quantidade de itens com valores.
