@@ -10,3 +10,12 @@ const operator = trasaction.amount < 0 ? '-'
 <p>
 a `const operator` que recebe um ternário com a condição de se o valor for < 0, armazenando uma string com o sinal de '-' (subtração). Caso false, será valor positivo '+'.
 </p>
+ 
+ ```
+ const init = () => {
+  dummyTrasactions.forEach(addTransactionIntoDOM)
+ }
+ ```
+<p>
+Função que vai executar o preenchimento das informações do estado da aplicação quando a página for carregada
+</p>
