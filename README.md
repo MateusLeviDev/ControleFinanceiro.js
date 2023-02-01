@@ -41,3 +41,9 @@ Função que vai executar o preenchimento das informações do estado da aplica�
 
 ![image](https://user-images.githubusercontent.com/101754313/215914980-8da5ccf6-be4d-4538-b025-243a760b2712.png)
 
+-  utilizaremos um método filter: o item vai ser add no array apenas quando a condição que essa funcao retornar true
+- função valor total das receitas
+- 
+![image](https://user-images.githubusercontent.com/101754313/215917104-4403717b-ea2e-4ccc-9da5-6e02e37cdfb9.png)
+
+
