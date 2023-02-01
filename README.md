@@ -56,5 +56,8 @@ agora que obtemos o valor total do saldo e das despesas iremos obter o valor tot
 
 ![image](https://user-images.githubusercontent.com/101754313/216111017-970ac75e-c910-4e0a-ab87-d96e54e83a63.png)
 
-- ☝️ recebe um array apenas com os valores das despesas
+- ☝️ recebe um array apenas com os valores das despesas. No console:
+
+![image](https://user-images.githubusercontent.com/101754313/216111498-cd8af332-f577-48ae-95bb-57adab6aa31f.png)
+
 
