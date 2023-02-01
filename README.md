@@ -94,4 +94,5 @@ Despesas R$ 30.00
 - Em azul obtemos o valor que o input tem no momento que o form é enviado
 - E em vermelho vai remover dessa string qualquer espaço em branco do inicio ao fim 
 - Como ficará o `id`, para isso vou gerar uma função que produz IDs aleatórios [VERDE]
+- `correção`: `id: generateID()`
 
