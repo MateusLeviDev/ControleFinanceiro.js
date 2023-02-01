@@ -67,6 +67,31 @@ Agora iremos inserir as informações no DOM.
 - do `p` que exibe o valor total das receitas 
 - e do `p` que exibe o valor total das despesas 
  
- ```
-![image](https://user-images.githubusercontent.com/101754313/216113506-74e0db7e-c08a-4c51-b012-e17a155ea6b8.png)
- ```
+![image](https://user-images.githubusercontent.com/101754313/216114059-808c6911-4e16-4cb7-9457-c37c8111bed6.png)
+
+- Veremos um objeto com as ref dos elementos que exibem os saldos, as despesas e as receitas na tela
+
+![image](https://user-images.githubusercontent.com/101754313/216116826-a9c3ebd2-10c3-46c0-b877-befcd43690eb.png)
+
+- consertando o valor negativo no valor das despesas. 
+- pelo método abs do método `Math`
+
+![image](https://user-images.githubusercontent.com/101754313/216117322-75357e14-bed3-4dbd-82dc-595db3f3e50c.png)
+
+```
+Despesas R$ 30.00
+```
+# Implementar funcionalidades no Form
+
+- Implementar uma transação 
+- em seguida, a possibilidade de remoção das transações ao clicar no "X"
+- Precisaremos de um listener de eventos que executa uma ação após o form ser enviado
+- Obter a ref do form 
+
+![image](https://user-images.githubusercontent.com/101754313/216123145-7de526d0-21ab-4f1d-9ff9-6d7daab2c923.png)
+
+
+- Em azul obtemos o valor que o input tem no momento que o form é enviado
+- E em vermelho vai remover dessa string qualquer espaço em branco do inicio ao fim 
+- Como ficará o `id`, para isso vou gerar uma função que produz IDs aleatórios [VERDE]
+
