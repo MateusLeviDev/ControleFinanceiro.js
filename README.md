@@ -1,3 +1,7 @@
+[PT-BR]eae, manos(as). meu readme é literalmente meu caderno equanto eu codo. Tentarei organizá-lo , prometo. preciso traduzir isso também. 
+[ENG]sup? my readme is literally my diary while i code. I'll try to organize it, promise. I need to translate this tooooo
+
+
 # ControleFinanceiro.js
  Aplicação de JavaScript puro em um sistema de controle finaceiro. Usando um boilerplate HTML + CSS. 
 
