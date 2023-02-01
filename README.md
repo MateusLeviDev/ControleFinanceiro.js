@@ -67,6 +67,9 @@ Agora iremos inserir as informações no DOM.
 - do `p` que exibe o valor total das receitas 
 - e do `p` que exibe o valor total das despesas 
  
- ```
-![image](https://user-images.githubusercontent.com/101754313/216113506-74e0db7e-c08a-4c51-b012-e17a155ea6b8.png)
- ```
+![image](https://user-images.githubusercontent.com/101754313/216114059-808c6911-4e16-4cb7-9457-c37c8111bed6.png)
+
+- Veremos um objeto com as ref dos elementos que exibem os saldos, as despesas e as receitas na tela
+
+
+
