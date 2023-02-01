@@ -2,6 +2,10 @@ const transactionsUl = document.querySelector('#transactions');
 const incomeDisplay = document.querySelector('#money-plus') //id no paragrafo que exibe o valor total da receita 
 const expenseDisplay = document.querySelector('#money-minus') // id valor total despesas
 const balanceDisplay = document.querySelector('#balance') //id do h1 que exibe o saldo total
+const form = document.querySelector('#form')
+const inputTransactionName = document.querySelector('#text')
+const inputTransactionAmount = document.querySelector('#amount')
+
 
 // declaramos um array de objetos para simular algumas transações 
 
@@ -48,9 +52,9 @@ const updateBalanceValues = () => {
         .reduce((accumulator, value) => accumulator + value, 0)
         .toFixed(2)
     //agora que obtemos o valor total do saldo e das despesas iremos obter o valor total das despesas. despois inserimos essas info no DOM para aprecer no topo da nossa interface. 
-    const expense = transactionsAmount
+    const expense = Math.abs(transactionsAmount
     .filter(value => value < 0)
-    .reduce((accumulator, value) => accumulator + value, 0)
+    .reduce((accumulator, value) => accumulator + value, 0))
     .toFixed(2) //recebe um array apenas com os valores das despesas
    
     balanceDisplay.textContent = `R$ ${total}`
@@ -64,3 +68,20 @@ const init = () => {
 }
 
 init()
+
+const generateID = () => Math.round(Math.random() * 1000)
+
+form.addEventListener('submit', event => {
+    event.preventDefault() //impedidno que o form seja enviado. Precisa garantir que tudo foi preenchido. 
+    // verificação 
+    const transactionName = inputTransactionName.value.trim() //para armazenar esses valores do dummyTransaction
+    const transactionsAmount = inputTransactionAmount.value.trim()
+    if (transactionName === '' || transactionsAmount === '') {
+        alert('Por favor preencha por completo a transação')
+        return 
+    }
+    // dois inputs preenchidos 
+    // objeto que representa a transação
+    const transaction =  { id: generateID(), name: transactionName, amount: transactionsAmount }
+    
+})
