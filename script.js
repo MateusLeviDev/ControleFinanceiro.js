@@ -32,9 +32,19 @@ const addTransactionIntoDOM = trasaction => {
 } // ctrl + k + f identação -----  shift alt mais seta
 
 const updateBalanceValues = () => {
-    const transactionsAmount = dummyTrasactions.map
+    const transactionsAmount = dummyTrasactions
+        .map
         (trasaction => trasaction.amount)
-    console.log(transactionsAmount)
+    const total = transactionsAmount
+        .reduce(
+        (accumulator, transaction) => accumulator + transaction, 0)
+        .toFixed(2) 
+    // utilizaremos um método filter 
+    const income = transactionsAmount
+        .filter(value => value > 0)
+        .reduce((accumulator, value) => accumulator + value, 0)
+        .toFixed(2)
+    console.log(income)
 }
 
 const init = () => {
