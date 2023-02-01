@@ -71,5 +71,16 @@ Agora iremos inserir as informações no DOM.
 
 - Veremos um objeto com as ref dos elementos que exibem os saldos, as despesas e as receitas na tela
 
+![image](https://user-images.githubusercontent.com/101754313/216116826-a9c3ebd2-10c3-46c0-b877-befcd43690eb.png)
+
+- consertando o valor negativo no valor das despesas. 
+- pelo método abs do método `Math`
+
+![image](https://user-images.githubusercontent.com/101754313/216117322-75357e14-bed3-4dbd-82dc-595db3f3e50c.png)
+
+```
+Despesas R$ 30.00
+```
+
 
 
