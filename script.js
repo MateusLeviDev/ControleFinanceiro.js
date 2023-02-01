@@ -1,4 +1,7 @@
 const transactionsUl = document.querySelector('#transactions');
+const incomeDisplay = document.querySelector('#money-plus') //id no paragrafo que exibe o valor total da receita 
+const expenseDisplay = document.querySelector('#money-minus') // id valor total despesas
+const balanceDisplay = document.querySelector('#balance') //id do h1 que exibe o saldo total
 
 // declaramos um array de objetos para simular algumas transações 
 
@@ -44,7 +47,15 @@ const updateBalanceValues = () => {
         .filter(value => value > 0)
         .reduce((accumulator, value) => accumulator + value, 0)
         .toFixed(2)
-    console.log(income)
+    //agora que obtemos o valor total do saldo e das despesas iremos obter o valor total das despesas. despois inserimos essas info no DOM para aprecer no topo da nossa interface. 
+    const expense = transactionsAmount
+    .filter(value => value < 0)
+    .reduce((accumulator, value) => accumulator + value, 0)
+    .toFixed(2) //recebe um array apenas com os valores das despesas
+   
+    balanceDisplay.textContent = `R$ ${total}`
+    incomeDisplay.textContent = `R$ ${income}`
+    expenseDisplay.textContent = `R$ ${expense}`
 }
 
 const init = () => {
