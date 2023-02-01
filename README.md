@@ -1,3 +1,7 @@
+[PT-BR]eae, manos(as). meu readme é literalmente meu caderno equanto eu codo. Tentarei organizá-lo , prometo. preciso traduzir isso também. <br>
+[ENG]sup? my readme is literally my diary while i code. I'll try to organize it, promise. I need to translate this tooooo
+
+
 # ControleFinanceiro.js
  Aplicação de JavaScript puro em um sistema de controle finaceiro. Usando um boilerplate HTML + CSS. 
 
@@ -43,7 +47,26 @@ Função que vai executar o preenchimento das informações do estado da aplica�
 
 -  utilizaremos um método filter: o item vai ser add no array apenas quando a condição que essa funcao retornar true
 - função valor total das receitas
-- 
+
 ![image](https://user-images.githubusercontent.com/101754313/215917104-4403717b-ea2e-4ccc-9da5-6e02e37cdfb9.png)
 
+<p>
+agora que obtemos o valor total do saldo e das despesas iremos obter o valor total das despesas. despois inserimos essas info no DOM para aprecer no topo da nossa interface. 
+</p>
 
+![image](https://user-images.githubusercontent.com/101754313/216111017-970ac75e-c910-4e0a-ab87-d96e54e83a63.png)
+
+- ☝️ recebe um array apenas com os valores das despesas. No console:
+
+![image](https://user-images.githubusercontent.com/101754313/216111498-cd8af332-f577-48ae-95bb-57adab6aa31f.png)
+<br>
+
+Agora iremos inserir as informações no DOM. 
+
+- Obtendo a referência desse `h1` do saldo atual.
+- do `p` que exibe o valor total das receitas 
+- e do `p` que exibe o valor total das despesas 
+ 
+ ```
+![image](https://user-images.githubusercontent.com/101754313/216113506-74e0db7e-c08a-4c51-b012-e17a155ea6b8.png)
+ ```
