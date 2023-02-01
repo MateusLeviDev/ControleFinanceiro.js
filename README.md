@@ -81,6 +81,17 @@ Agora iremos inserir as informações no DOM.
 ```
 Despesas R$ 30.00
 ```
+# Implementar funcionalidades no Form
+
+- Implementar uma transação 
+- em seguida, a possibilidade de remoção das transações ao clicar no "X"
+- Precisaremos de um listener de eventos que executa uma ação após o form ser enviado
+- Obter a ref do form 
+
+![image](https://user-images.githubusercontent.com/101754313/216123145-7de526d0-21ab-4f1d-9ff9-6d7daab2c923.png)
 
 
+- Em azul obtemos o valor que o input tem no momento que o form é enviado
+- E em vermelho vai remover dessa string qualquer espaço em branco do inicio ao fim 
+- Como ficará o `id`, para isso vou gerar uma função que produz IDs aleatórios [VERDE]
 
