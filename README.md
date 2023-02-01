@@ -38,3 +38,6 @@ Função que vai executar o preenchimento das informações do estado da aplica�
 1 : essa função sempre precisa retornar um valor, e cada vez que é retornado o acumulator recebe o valor. Zero serviu apenas para somar pelo parâmetro.
 - boa prática ter um valor específicada com algo real, para identificar o tipo de dado que o reduce vai retornar quando for finalizado.
 [aula reduce link yb]
+
+![image](https://user-images.githubusercontent.com/101754313/215914980-8da5ccf6-be4d-4538-b025-243a760b2712.png)
+
