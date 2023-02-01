@@ -47,7 +47,14 @@ Função que vai executar o preenchimento das informações do estado da aplica�
 
 -  utilizaremos um método filter: o item vai ser add no array apenas quando a condição que essa funcao retornar true
 - função valor total das receitas
-- 
+
 ![image](https://user-images.githubusercontent.com/101754313/215917104-4403717b-ea2e-4ccc-9da5-6e02e37cdfb9.png)
 
+<p>
+agora que obtemos o valor total do saldo e das despesas iremos obter o valor total das despesas. despois inserimos essas info no DOM para aprecer no topo da nossa interface. 
+</p>
+
+![image](https://user-images.githubusercontent.com/101754313/216111017-970ac75e-c910-4e0a-ab87-d96e54e83a63.png)
+
+- ☝️ recebe um array apenas com os valores das despesas
 
