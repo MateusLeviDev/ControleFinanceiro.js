@@ -68,5 +68,5 @@ Agora iremos inserir as informações no DOM.
 - e do `p` que exibe o valor total das despesas 
  
  ```
- const incomeDisplay = document.querySelector('#money-plus') //id no paragrafo que exibe o valor total da receita
+![image](https://user-images.githubusercontent.com/101754313/216113506-74e0db7e-c08a-4c51-b012-e17a155ea6b8.png)
  ```
