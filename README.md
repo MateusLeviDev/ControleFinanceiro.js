@@ -59,5 +59,14 @@ agora que obtemos o valor total do saldo e das despesas iremos obter o valor tot
 - ☝️ recebe um array apenas com os valores das despesas. No console:
 
 ![image](https://user-images.githubusercontent.com/101754313/216111498-cd8af332-f577-48ae-95bb-57adab6aa31f.png)
+<br>
 
+Agora iremos inserir as informações no DOM. 
 
+- Obtendo a referência desse `h1` do saldo atual.
+- do `p` que exibe o valor total das receitas 
+- e do `p` que exibe o valor total das despesas 
+ 
+ ```
+ const incomeDisplay = document.querySelector('#money-plus') //id no paragrafo que exibe o valor total da receita
+ ```
