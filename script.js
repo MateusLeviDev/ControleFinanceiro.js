@@ -25,44 +25,53 @@ const removeTransaction = ID => {
     transactions = transactions
     .filter(transaction => 
         transaction.id !== ID)
+    updateLocalStorage()
     init()
 }
 
-const addTransactionIntoDOM = transaction => {
+const addTransactionIntoDOM = ({ amount, name, id }) => {
     // dentro dessa função iremos gerar uma li com os dados 
-    const operator = transaction.amount < 0 ? '-' : '+';
-    const CSSClass = transaction.amount < 0 ? 'minus' : 'plus'
-    const amountWithoutOperator = Math.abs(transaction.amount)
+    const operator = amount < 0 ? '-' : '+';
+    const CSSClass = amount < 0 ? 'minus' : 'plus'
+    const amountWithoutOperator = Math.abs(amount)
     const li = document.createElement('li') //met que criamos novo element html
 
     li.classList.add(CSSClass)
     li.innerHTML = `
-    ${transaction.name} 
+    ${name} 
     <span>${operator} R$ ${amountWithoutOperator}</span>
-    <button class="delete-btn" onClick="removeTransaction(${transaction.id})">
-    x
-    </button>
-    `
+    <button class="delete-btn" onClick="removeTransaction(${id})">x</button>`
     transactionsUl.prepend(li)
 
 } // ctrl + k + f identação -----  shift alt mais seta
 
-const updateBalanceValues = () => {
-    const transactionsAmount = transactions
-        .map(transaction => transactions.amount)
-    const total = transactionsAmount
-        .reduce((accumulator, transaction) => accumulator + transaction, 0)
-        .toFixed(2) 
-    // utilizaremos um método filter 
-    const income = transactionsAmount
+const getExpenses = transactionsAmount => {
+    Math.abs(transactionsAmount
+        .filter(value => value < 0)
+        .reduce((accumulator, value) => accumulator + value, 0))
+        .toFixed(2) //recebe um array apenas com os valores das despesas
+}
+
+const getIncome = transactionsAmount => {
+    transactionsAmount
         .filter(value => value > 0)
         .reduce((accumulator, value) => accumulator + value, 0)
         .toFixed(2)
+}
+
+const getTotal = transactionsAmount => {
+    transactionsAmount
+    .reduce((accumulator, transaction) => accumulator + transaction, 0)
+    .toFixed(2) 
+}
+
+const updateBalanceValues = () => {
+    const transactionsAmount = transactions.map(({ amount }) =>amount)
+    const total = getTotal
+    // utilizaremos um método filter 
+    const income = getIncome(transactionsAmount)
     //agora que obtemos o valor total do saldo e das despesas iremos obter o valor total das despesas. despois inserimos essas info no DOM para aprecer no topo da nossa interface. 
-    const expense = Math.abs(transactionsAmount
-    .filter(value => value < 0)
-    .reduce((accumulator, value) => accumulator + value, 0))
-    .toFixed(2) //recebe um array apenas com os valores das despesas
+    const expense = getExpenses(transactionsAmount)
    
     balanceDisplay.textContent = `R$ ${total}`
     incomeDisplay.textContent = `R$ ${income}`
@@ -77,28 +86,43 @@ const init = () => {
 
 init()
 
+const updateLocalStorage = () => {
+    localStorage.setItem('transactions', JSON.stringify(transactions)) //met vai salvar a info no localStorage
+}
+
 const generateID = () => Math.round(Math.random() * 1000)
 
-form.addEventListener('submit', event => {
+const addToTransactionArray = (transactionName , transactionAmount) => {
+    transactions.push({
+        id: generateID(), 
+        name: transactionName, 
+        amount: Number(transactionAmount)
+    })
+}
+const cleanInput = () => {
+    inputTransactionName.value = ''
+    inputTransactionAmount.value = ''
+}
+
+const handleFormSubmit = event => {
     event.preventDefault() //impedidno que o form seja enviado. Precisa garantir que tudo foi preenchido. 
     // verificação 
     const transactionName = inputTransactionName.value.trim() //para armazenar esses valores do dummyTransaction
     const transactionAmount = inputTransactionAmount.value.trim()
-    if (transactionName === '' || transactionAmount === '') {
+    const IsSomeInputEmpty = inputTransactionName.value = ''
+    inputTransactionAmount.value = ''
+
+    if (IsSomeInputEmpty) {
         alert('Por favor preencha por completo a transação')
         return 
     }
     // dois inputs preenchidos 
     // objeto que representa a transação
-    const transaction =  { 
-        id: generateID(), 
-        name: transactionName, 
-        amount: Number(transactionAmount)
-    }
-    
-    transactions.push(transaction)
+    addToTransactionArray(transactionName, transactionAmount)
     init()
+    updateLocalStorage()
+    cleanInput()
+  
+}
 
-    inputTransactionName.value = ''
-    inputTransactionAmount.value = ''
-})
+form.addEventListener('submit', handleFormSubmit)
