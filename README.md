@@ -1,4 +1,4 @@
-[PT-BR]eae, manos(as). meu readme é literalmente meu caderno equanto eu codo. Tentarei organizá-lo , prometo. preciso traduzir isso também. <br>
+[PT-BR]eae, manos(as). meu readme é literalmente meu caderno enquanto eu codo. Tentarei organizá-lo , prometo. preciso traduzir isso também. <br>
 [ENG]sup? my readme is literally my diary while i code. I'll try to organize it, promise. I need to translate this tooooo
 
 
@@ -94,4 +94,5 @@ Despesas R$ 30.00
 - Em azul obtemos o valor que o input tem no momento que o form é enviado
 - E em vermelho vai remover dessa string qualquer espaço em branco do inicio ao fim 
 - Como ficará o `id`, para isso vou gerar uma função que produz IDs aleatórios [VERDE]
+- `correção`: `id: generateID()`
 
