@@ -250,3 +250,27 @@ const handleFormSubmit = event => {
 
 form.addEventListener('submit', handleFormSubmit)
 ```
+
+- correção erro ao atualizar valores no total 
+
+```
+const updateBalanceValues = () => {
+const transactionsAmounts = transactions.map(transaction => transaction.amount)
+
+const total = transactionsAmounts.reduce((accumulator, transaction) => accumulator + transaction, 0).toFixed(2)
+
+const income = transactionsAmounts
+    .filter(value => value > 0)
+    .reduce((accumulator, value) => accumulator + value, 0)
+    .toFixed(2)
+
+const expense = Math.abs(transactionsAmounts
+    .filter(value => value < 0)
+    .reduce((accumulator, value) => accumulator + value, 0))
+    .toFixed(2)
+
+    balanceDisplay.textContent = `R$ ${total}`
+    incomeDisplay.textContent = `R$ ${income}`
+    expenseDisplay.textContent = `R$ ${expense}`
+}
+```
