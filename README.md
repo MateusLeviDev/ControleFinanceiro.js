@@ -2,7 +2,9 @@
 [ENG]sup? my readme is literally my diary while i code. I'll try to organize it, promise. I need to translate this tooooo
 
 
-# ControleFinanceiro.js
+<h1 align="center">
+  ControleFinanceiro.js
+</h1>
 #### `Pure JavaScript application in a financial control system. Using an HTML + CSS boilerplate.`
 
 
