@@ -3,7 +3,7 @@
 
 
 # ControleFinanceiro.js
- Aplicação de JavaScript puro em um sistema de controle finaceiro. Usando um boilerplate HTML + CSS. 
+#### `Pure JavaScript application in a financial control system. Using an HTML + CSS boilerplate.`
 
 
 - O parâmetro `transaction` recebe um objeto que representa a transação podemos verificar o valor dessa propriedade amount. Caso o valor seja menor que 0 podemos armazenar um operador de subtração em uma const, caso contrario será de adição. 
